@@ -62,15 +62,38 @@ import math
 
 
 # 22: Verificador de Palíndromo
-palavra_ou_frase = input("Por favor digite uma palavra ou frase para verificação: ")
-if isinstance(palavra_ou_frase, str) and not palavra_ou_frase.isdigit():
-    formatado = palavra_ou_frase.replace(" ", "").lower()
-    if formatado == formatado[::-1]:
-        print('É um palíndromo.')
-    else: 
-        print('Não é um palíndromo.')
-else:
-    print('A variável não é uma string')
+# palavra_ou_frase = input("Por favor digite uma palavra ou frase para verificação: ")
+# if isinstance(palavra_ou_frase, str) and not palavra_ou_frase.isdigit():
+#     formatado = palavra_ou_frase.replace(" ", "").lower()
+#     if formatado == formatado[::-1]:
+#         print('É um palíndromo.')
+#     else: 
+#         print('Não é um palíndromo.')
+# else:
+#     print('A variável não é uma string')
+
 # 23: Calculadora Simples
+try:
+    primeiro_numero = float(input('Por favor digite o primeiro número: '))
+    operador = input('Por favor digite um operador: ')
+    segundo_numero = float(input('Por favor digite o segundo número: '))
+    if isinstance(primeiro_numero, float) and isinstance(segundo_numero, float):
+        if operador == '+':
+            print(primeiro_numero + segundo_numero)
+        elif operador == '-':
+            print(primeiro_numero - segundo_numero)
+        elif operador == '*':
+            print(primeiro_numero * segundo_numero)
+        elif operador == '/':
+            print(primeiro_numero / segundo_numero)
+        else:
+            print('Por favor digite um operador matemático válido.')
+    else:
+        print('O valor digitado não é um número.')
+except ZeroDivisionError:
+    print('Divisão por zero não é permitido')
+except ValueError:
+    print('O valor digitado não é um número')
+
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação

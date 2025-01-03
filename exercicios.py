@@ -10,6 +10,7 @@ import math
 # segundo_numero = int(input('Por favor digite o segundo número: '))
 # divisao = primeiro_numero // segundo_numero
 # print(divisao)
+    
 
 # 5. Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 
@@ -32,11 +33,11 @@ import math
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
-data_digitada = input('Por favor digite uma data no formato "dd/mm/aaa": ')
-lista_de_dia_mes_ano = data_digitada.split('/')
-print(f"O elemento 1 é o: {lista_de_dia_mes_ano[0]}")
-print(f"O elemento 2 é o: {lista_de_dia_mes_ano[1]}")
-print(f"O elemento 3 é o: {lista_de_dia_mes_ano[2]}")
+# data_digitada = input('Por favor digite uma data no formato "dd/mm/aaa": ')
+# lista_de_dia_mes_ano = data_digitada.split('/')
+# print(f"O elemento 1 é o: {lista_de_dia_mes_ano[0]}")
+# print(f"O elemento 2 é o: {lista_de_dia_mes_ano[1]}")
+# print(f"O elemento 2 é o: {lista_de_dia_mes_ano[2]}")
 
 
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
@@ -52,6 +53,14 @@ print(f"O elemento 3 é o: {lista_de_dia_mes_ano[2]}")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+try:
+    celsius = float(input('Por favor digite o Celsius para ser convertido: '))
+    conversao = (celsius * 9/5) + 32
+    print(f'O Valor Celsius digitado, convertido para Fahrenheit é de {conversao}F.')
+except ValueError:
+    print('Por favor digite um valor em Celsius válido')
+
+
 # 22: Verificador de Palíndromo
 # 23: Calculadora Simples
 # 24: Classificador de Números

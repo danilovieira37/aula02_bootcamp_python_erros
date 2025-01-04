@@ -73,27 +73,45 @@ import math
 #     print('A variável não é uma string')
 
 # 23: Calculadora Simples
+# try:
+#     primeiro_numero = float(input('Por favor digite o primeiro número: '))
+#     operador = input('Por favor digite um operador: ')
+#     segundo_numero = float(input('Por favor digite o segundo número: '))
+#     if isinstance(primeiro_numero, float) and isinstance(segundo_numero, float):
+#         if operador == '+':
+#             print(primeiro_numero + segundo_numero)
+#         elif operador == '-':
+#             print(primeiro_numero - segundo_numero)
+#         elif operador == '*':
+#             print(primeiro_numero * segundo_numero)
+#         elif operador == '/':
+#             print(primeiro_numero / segundo_numero)
+#         else:
+#             print('Por favor digite um operador matemático válido.')
+#     else:
+#         print('O valor digitado não é um número.')
+# except ZeroDivisionError:
+#     print('Divisão por zero não é permitido')
+# except ValueError:
+#     print('O valor digitado não é um número')
+
+# 24: Classificador de Números
 try:
-    primeiro_numero = float(input('Por favor digite o primeiro número: '))
-    operador = input('Por favor digite um operador: ')
-    segundo_numero = float(input('Por favor digite o segundo número: '))
-    if isinstance(primeiro_numero, float) and isinstance(segundo_numero, float):
-        if operador == '+':
-            print(primeiro_numero + segundo_numero)
-        elif operador == '-':
-            print(primeiro_numero - segundo_numero)
-        elif operador == '*':
-            print(primeiro_numero * segundo_numero)
-        elif operador == '/':
-            print(primeiro_numero / segundo_numero)
-        else:
-            print('Por favor digite um operador matemático válido.')
+    numero_digitado = int(input('Por favor digite um número para clasificação: '))
+    if isinstance(numero_digitado, int):
+        if numero_digitado > 0 and numero_digitado % 2 == 0:
+            print('O número é positivo e é Par')
+        elif numero_digitado < 0 and numero_digitado % 2 == 0:
+            print('O número é Negativo e é Par')
+        elif numero_digitado == 0:
+            print('O número é Zero e Neutro')
+        elif numero_digitado > 0:
+            print('O número é positivo e é Impar')
+        elif numero_digitado < 0:
+            print('O número é Negativo e é Impar')
     else:
         print('O valor digitado não é um número.')
-except ZeroDivisionError:
-    print('Divisão por zero não é permitido')
 except ValueError:
     print('O valor digitado não é um número')
 
-# 24: Classificador de Números
 # 25: Conversão de Tipo com Validação

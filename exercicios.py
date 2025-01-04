@@ -96,22 +96,32 @@ import math
 #     print('O valor digitado não é um número')
 
 # 24: Classificador de Números
-try:
-    numero_digitado = int(input('Por favor digite um número para clasificação: '))
-    if isinstance(numero_digitado, int):
-        if numero_digitado > 0 and numero_digitado % 2 == 0:
-            print('O número é positivo e é Par')
-        elif numero_digitado < 0 and numero_digitado % 2 == 0:
-            print('O número é Negativo e é Par')
-        elif numero_digitado == 0:
-            print('O número é Zero e Neutro')
-        elif numero_digitado > 0:
-            print('O número é positivo e é Impar')
-        elif numero_digitado < 0:
-            print('O número é Negativo e é Impar')
-    else:
-        print('O valor digitado não é um número.')
-except ValueError:
-    print('O valor digitado não é um número')
+# try:
+#     numero_digitado = int(input('Por favor digite um número para clasificação: '))
+#     if isinstance(numero_digitado, int):
+#         if numero_digitado > 0 and numero_digitado % 2 == 0:
+#             print('O número é positivo e é Par')
+#         elif numero_digitado < 0 and numero_digitado % 2 == 0:
+#             print('O número é Negativo e é Par')
+#         elif numero_digitado == 0:
+#             print('O número é Zero e Neutro')
+#         elif numero_digitado > 0:
+#             print('O número é positivo e é Impar')
+#         elif numero_digitado < 0:
+#             print('O número é Negativo e é Impar')
+#     else:
+#         print('O valor digitado não é um número.')
+# except ValueError:
+#     print('O valor digitado não é um número')
 
 # 25: Conversão de Tipo com Validação
+
+numeros = input('Por favor digite a lista de números separando eles por ",": ')
+numeros_str = numeros.split(",")
+numeros_int = []
+try:
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print('Lista de inteiros:', numeros_int)
+except ValueError:
+    print('Erro: certifique-se de que todos os elementos são números inteiros válidos.')
